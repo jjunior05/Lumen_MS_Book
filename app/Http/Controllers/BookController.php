@@ -73,13 +73,13 @@ class BookController extends Controller
      * Delete an existing author
      * @return Illuminate\Http\Response
      */
-    public function destroy($author)
+    public function destroy($book)
     {
-        $author = Book::findOrFail($author);
+        $book = Book::findOrFail($book);
 
-        $author->delete();
+        $book->delete();
 
-        return $this->successResponse($author);
+        return $this->successResponse($book);
     }
 
     //
